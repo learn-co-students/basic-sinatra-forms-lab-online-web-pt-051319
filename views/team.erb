@@ -5,10 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
-
+ 	<% params.each_pair do |key, value| %>
+ 	<% if key == 'Team Name' %>
+ 		<h2><%= "#{key}: #{value}" %></h2>
+ 	<%  else %>
+ 		<h3><%= "#{key}: #{value}" %></h3>
+ 	<% end %>
+ 	<% end %>
  </body>
 </html>
-
-
